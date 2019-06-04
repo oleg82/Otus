@@ -13,6 +13,8 @@
 		D23C669A22A04D91003012DC /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23C669822A04D91003012DC /* Detail.storyboard */; };
 		D23C669C22A04D97003012DC /* SomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C669B22A04D97003012DC /* SomeButton.swift */; };
 		D23C669E22A04D9D003012DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23C669D22A04D9D003012DC /* LaunchScreen.storyboard */; };
+		D23EA8D122A653B8003C197F /* SomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D23EA8D022A653B8003C197F /* SomeView.xib */; };
+		D23EA8D322A653C7003C197F /* SomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23EA8D222A653C7003C197F /* SomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D23C669822A04D91003012DC /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		D23C669B22A04D97003012DC /* SomeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomeButton.swift; sourceTree = "<group>"; };
 		D23C669D22A04D9D003012DC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D23EA8D022A653B8003C197F /* SomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SomeView.xib; sourceTree = "<group>"; };
+		D23EA8D222A653C7003C197F /* SomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				D23C669B22A04D97003012DC /* SomeButton.swift */,
+				D23EA8D222A653C7003C197F /* SomeView.swift */,
+				D23EA8D022A653B8003C197F /* SomeView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,6 +183,7 @@
 				D23C669E22A04D9D003012DC /* LaunchScreen.storyboard in Resources */,
 				D23C669922A04D91003012DC /* Main.storyboard in Resources */,
 				D23C669A22A04D91003012DC /* Detail.storyboard in Resources */,
+				D23EA8D122A653B8003C197F /* SomeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +196,7 @@
 			files = (
 				D23C668022A04C82003012DC /* AppDelegate.swift in Sources */,
 				D23C669C22A04D97003012DC /* SomeButton.swift in Sources */,
+				D23EA8D322A653C7003C197F /* SomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
