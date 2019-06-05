@@ -21,6 +21,7 @@ class ProfileController: UIViewController {
                 vc.statusBarStyle = .lightContent
                 viewController.setNeedsStatusBarAppearanceUpdate()
             }
+            viewController.navigationController?.navigationBar.barStyle = .black
         }
     }
 

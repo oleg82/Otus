@@ -13,7 +13,7 @@
         <!--Split View Controller-->
         <scene sceneID="Woi-PL-JQR">
             <objects>
-                <splitViewController storyboardIdentifier="MainController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xxi-3m-gZ0" sceneMemberID="viewController">
+                <splitViewController id="Xxi-3m-gZ0" sceneMemberID="viewController">
                     <connections>
                         <segue destination="CNj-y8-h1J" kind="relationship" relationship="masterViewController" id="BgN-ju-D3f"/>
                         <segue destination="Ru6-9c-ySb" kind="relationship" relationship="detailViewController" id="AiX-gz-65e"/>
