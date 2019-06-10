@@ -8,24 +8,8 @@
 
 import UIKit
 
-class ProfileController: UIViewController {
-    private class BackgroundColorNavigationBarBehavior: ViewControllerLifecycleBehavior {
-        func afterLoading(_ viewController: UIViewController) {
-            viewController.view.backgroundColor = .black
-        }
-    }
-
-    private class StatusBarStyleNavigationBarBehavior: ViewControllerLifecycleBehavior {
-        func beforeAppearing(_ viewController: UIViewController) {
-            if let vc = viewController as? ProfileController {
-                vc.statusBarStyle = .lightContent
-                viewController.setNeedsStatusBarAppearanceUpdate()
-            }
-            viewController.navigationController?.navigationBar.barStyle = .black
-        }
-    }
-
-    private var statusBarStyle: UIStatusBarStyle = .default
+class ProfileController: UIViewController, StatusBarConfigurable {
+    var statusBarStyle: UIStatusBarStyle = .default
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return statusBarStyle

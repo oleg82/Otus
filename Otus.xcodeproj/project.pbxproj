@@ -15,6 +15,10 @@
 		D23C669E22A04D9D003012DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23C669D22A04D9D003012DC /* LaunchScreen.storyboard */; };
 		D23EA8D122A653B8003C197F /* SomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D23EA8D022A653B8003C197F /* SomeView.xib */; };
 		D23EA8D322A653C7003C197F /* SomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23EA8D222A653C7003C197F /* SomeView.swift */; };
+		D2C613FD22AEE32D00AED82D /* TimerNavigationBarBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C613FC22AEE32D00AED82D /* TimerNavigationBarBehavior.swift */; };
+		D2C613FF22AEE35E00AED82D /* BackgroundColorNavigationBarBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C613FE22AEE35E00AED82D /* BackgroundColorNavigationBarBehavior.swift */; };
+		D2C6140122AEE36900AED82D /* StatusBarStyleNavigationBarBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C6140022AEE36900AED82D /* StatusBarStyleNavigationBarBehavior.swift */; };
+		D2C6140422AEE3EE00AED82D /* StatusBarConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C6140322AEE3EE00AED82D /* StatusBarConfigurable.swift */; };
 		D2DFC29422A835F90002F074 /* BenchmarkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DFC29322A835F90002F074 /* BenchmarkController.swift */; };
 		D2DFC29722A836510002F074 /* ViewControllerLifecycleBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DFC29622A836510002F074 /* ViewControllerLifecycleBehavior.swift */; };
 		D2DFC29922A838C50002F074 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DFC29822A838C50002F074 /* ProfileController.swift */; };
@@ -34,6 +38,10 @@
 		D23C669D22A04D9D003012DC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D23EA8D022A653B8003C197F /* SomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SomeView.xib; sourceTree = "<group>"; };
 		D23EA8D222A653C7003C197F /* SomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeView.swift; sourceTree = "<group>"; };
+		D2C613FC22AEE32D00AED82D /* TimerNavigationBarBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerNavigationBarBehavior.swift; sourceTree = "<group>"; };
+		D2C613FE22AEE35E00AED82D /* BackgroundColorNavigationBarBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorNavigationBarBehavior.swift; sourceTree = "<group>"; };
+		D2C6140022AEE36900AED82D /* StatusBarStyleNavigationBarBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarStyleNavigationBarBehavior.swift; sourceTree = "<group>"; };
+		D2C6140322AEE3EE00AED82D /* StatusBarConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarConfigurable.swift; sourceTree = "<group>"; };
 		D2DFC29322A835F90002F074 /* BenchmarkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkController.swift; sourceTree = "<group>"; };
 		D2DFC29622A836510002F074 /* ViewControllerLifecycleBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerLifecycleBehavior.swift; sourceTree = "<group>"; };
 		D2DFC29822A838C50002F074 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
@@ -91,9 +99,10 @@
 		D23C669222A04CBD003012DC /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				D2DFC29F22A848590002F074 /* Extensions */,
-				D2DFC29522A8363C0002F074 /* Protocols */,
+				D2DFC29522A8363C0002F074 /* Behaviors */,
 				D2DFC29222A835AD0002F074 /* Controllers */,
+				D2DFC29F22A848590002F074 /* Extensions */,
+				D2C6140222AEE3E100AED82D /* Protocols */,
 				D23C669422A04CCF003012DC /* Storyboards */,
 				D23C669322A04CC6003012DC /* Views */,
 			);
@@ -136,6 +145,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		D2C6140222AEE3E100AED82D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D2C6140322AEE3EE00AED82D /* StatusBarConfigurable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		D2DFC29222A835AD0002F074 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,12 +163,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		D2DFC29522A8363C0002F074 /* Protocols */ = {
+		D2DFC29522A8363C0002F074 /* Behaviors */ = {
 			isa = PBXGroup;
 			children = (
+				D2C613FE22AEE35E00AED82D /* BackgroundColorNavigationBarBehavior.swift */,
+				D2C6140022AEE36900AED82D /* StatusBarStyleNavigationBarBehavior.swift */,
+				D2C613FC22AEE32D00AED82D /* TimerNavigationBarBehavior.swift */,
 				D2DFC29622A836510002F074 /* ViewControllerLifecycleBehavior.swift */,
 			);
-			path = Protocols;
+			path = Behaviors;
 			sourceTree = "<group>";
 		};
 		D2DFC29F22A848590002F074 /* Extensions */ = {
@@ -238,13 +258,17 @@
 			files = (
 				D23C668022A04C82003012DC /* AppDelegate.swift in Sources */,
 				D23C669C22A04D97003012DC /* SomeButton.swift in Sources */,
+				D2C613FF22AEE35E00AED82D /* BackgroundColorNavigationBarBehavior.swift in Sources */,
 				D2DFC2A322A848740002F074 /* UINavigationController+.swift in Sources */,
 				D23EA8D322A653C7003C197F /* SomeView.swift in Sources */,
 				D2DFC2A122A848670002F074 /* UISplitViewController+.swift in Sources */,
 				D2DFC29722A836510002F074 /* ViewControllerLifecycleBehavior.swift in Sources */,
 				D2DFC29422A835F90002F074 /* BenchmarkController.swift in Sources */,
+				D2C6140422AEE3EE00AED82D /* StatusBarConfigurable.swift in Sources */,
 				D2DFC29922A838C50002F074 /* ProfileController.swift in Sources */,
+				D2C613FD22AEE32D00AED82D /* TimerNavigationBarBehavior.swift in Sources */,
 				D2DFC29B22A83BF80002F074 /* Feed3Controller.swift in Sources */,
+				D2C6140122AEE36900AED82D /* StatusBarStyleNavigationBarBehavior.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
