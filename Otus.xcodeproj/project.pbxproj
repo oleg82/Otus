@@ -98,8 +98,7 @@
 		D23C667E22A04C82003012DC /* Otus */ = {
 			isa = PBXGroup;
 			children = (
-				D23C669122A04CB2003012DC /* ApplicationLayer */,
-				D258451022B2CA63005CD945 /* CoreLayer */,
+				D258451022B2CA63005CD945 /* BusinessLogicLayer */,
 				D23C669222A04CBD003012DC /* PresentationLayer */,
 				D23C669622A04CED003012DC /* Resources */,
 				D23C669522A04CDE003012DC /* Supporting Files */,
@@ -107,17 +106,10 @@
 			path = Otus;
 			sourceTree = "<group>";
 		};
-		D23C669122A04CB2003012DC /* ApplicationLayer */ = {
-			isa = PBXGroup;
-			children = (
-				D23C667F22A04C82003012DC /* AppDelegate.swift */,
-			);
-			path = ApplicationLayer;
-			sourceTree = "<group>";
-		};
 		D23C669222A04CBD003012DC /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				D23C667F22A04C82003012DC /* AppDelegate.swift */,
 				D258450F22B2CA34005CD945 /* Common */,
 				D258450122B2C7F8005CD945 /* UserStories */,
 			);
@@ -220,13 +212,13 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		D258451022B2CA63005CD945 /* CoreLayer */ = {
+		D258451022B2CA63005CD945 /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
 				D258451122B2CA88005CD945 /* FeedProvider.swift */,
 				D258451D22B2D608005CD945 /* BenchmarkProvider.swift */,
 			);
-			path = CoreLayer;
+			path = BusinessLogicLayer;
 			sourceTree = "<group>";
 		};
 		D2C6140222AEE3E100AED82D /* Protocols */ = {
