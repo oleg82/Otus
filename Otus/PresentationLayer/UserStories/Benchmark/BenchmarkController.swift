@@ -14,7 +14,7 @@ class BenchmarkController: UIViewController {
         var seconds = 0
         var timer: Timer? = nil
     }
-    private var models = (0...20).map { _ in CellModel() }
+    private var models = (0...2).map { _ in CellModel() }
 
     @IBOutlet private var collectionView: UICollectionView!
     

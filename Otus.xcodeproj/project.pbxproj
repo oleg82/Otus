@@ -24,6 +24,7 @@
 		D258451B22B2CFAD005CD945 /* BenchmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D258451922B2CFAD005CD945 /* BenchmarkCell.swift */; };
 		D258451C22B2CFAD005CD945 /* BenchmarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D258451A22B2CFAD005CD945 /* BenchmarkCell.xib */; };
 		D258451E22B2D608005CD945 /* BenchmarkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D258451D22B2D608005CD945 /* BenchmarkProvider.swift */; };
+		D2A6B94D22C2AB9700E6FF4F /* PieChartVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A6B94C22C2AB9700E6FF4F /* PieChartVeiw.swift */; };
 		D2C613FD22AEE32D00AED82D /* TimerNavigationBarBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C613FC22AEE32D00AED82D /* TimerNavigationBarBehavior.swift */; };
 		D2C613FF22AEE35E00AED82D /* BackgroundColorNavigationBarBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C613FE22AEE35E00AED82D /* BackgroundColorNavigationBarBehavior.swift */; };
 		D2C6140122AEE36900AED82D /* StatusBarStyleNavigationBarBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C6140022AEE36900AED82D /* StatusBarStyleNavigationBarBehavior.swift */; };
@@ -56,6 +57,7 @@
 		D258451922B2CFAD005CD945 /* BenchmarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkCell.swift; sourceTree = "<group>"; };
 		D258451A22B2CFAD005CD945 /* BenchmarkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BenchmarkCell.xib; sourceTree = "<group>"; };
 		D258451D22B2D608005CD945 /* BenchmarkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkProvider.swift; sourceTree = "<group>"; };
+		D2A6B94C22C2AB9700E6FF4F /* PieChartVeiw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartVeiw.swift; sourceTree = "<group>"; };
 		D2C613FC22AEE32D00AED82D /* TimerNavigationBarBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerNavigationBarBehavior.swift; sourceTree = "<group>"; };
 		D2C613FE22AEE35E00AED82D /* BackgroundColorNavigationBarBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorNavigationBarBehavior.swift; sourceTree = "<group>"; };
 		D2C6140022AEE36900AED82D /* StatusBarStyleNavigationBarBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarStyleNavigationBarBehavior.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				D23C669B22A04D97003012DC /* SomeButton.swift */,
 				D23EA8D222A653C7003C197F /* SomeView.swift */,
 				D23EA8D022A653B8003C197F /* SomeView.xib */,
+				D2A6B94C22C2AB9700E6FF4F /* PieChartVeiw.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2A6B94D22C2AB9700E6FF4F /* PieChartVeiw.swift in Sources */,
 				D258451822B2CE56005CD945 /* ViewControllerable.swift in Sources */,
 				D23C668022A04C82003012DC /* AppDelegate.swift in Sources */,
 				D23C669C22A04D97003012DC /* SomeButton.swift in Sources */,
