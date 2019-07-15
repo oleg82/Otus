@@ -13,71 +13,93 @@ struct Segment {
     let title: String
 }
 
-extension CGFloat {
-    func toRadians() -> CGFloat {
-        return self * CGFloat(Double.pi) / 180.0
-    }
-}
-
-class CircleLayer: CAShapeLayer {
+class SegmentCircleLayer: CAShapeLayer {
+    private static let keyPath = "strokeEnd"
     private static let keyAnimation = "strokeEndAnimation"
     
-    func addPath(startPoint: CGPoint, radius: CGFloat, fillColor: UIColor) {
-        
-        
-        let startAngle:CGFloat = (30-90).toRadians()
-        let endAngle:CGFloat = (150-90).toRadians()
-        let path = UIBezierPath(arcCenter: CGPoint(x: 0,y :0), radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
-        
-        self.position = startPoint
-        self.lineWidth = radius*2
-        self.path = path.cgPath
-        
-//        self.path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 2.0 * radius, height: 2.0 * radius), cornerRadius: radius).cgPath
-//        self.position = CGPoint(x: startPoint.x - radius, y: startPoint.y - radius)
-//        self.fillColor = fillColor.cgColor
-    }
-    
     func startAnimate() {
-        let pathAnimation = CABasicAnimation(keyPath: "strokeEnd")
-        pathAnimation.duration = 10.0;
+        let pathAnimation = CABasicAnimation(keyPath: SegmentCircleLayer.keyPath)
+        pathAnimation.duration = 2.0;
         pathAnimation.fromValue = 0.0;
         pathAnimation.toValue = 1.0;
-        self.add(pathAnimation, forKey: CircleLayer.keyAnimation)
+        self.add(pathAnimation, forKey: SegmentCircleLayer.keyAnimation)
     }
     
     func stopAnimate() {
-        self.removeAnimation(forKey: CircleLayer.keyAnimation)
+        self.removeAnimation(forKey: SegmentCircleLayer.keyAnimation)
     }
 }
 
 class PieChartVeiw: UIView {
-    let circleLayer = CircleLayer()
-    var fromAngle:CGFloat = 30
-    var toAngle:CGFloat = 150
+    private lazy var textAttributes: [NSAttributedString.Key: Any] = [
+        .font               : UIFont.systemFont(ofSize: 14),
+        .foregroundColor    : UIColor.black
+    ]
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
+    var segments: [Segment] = []
+    
+    func show() {
+        if segments.isEmpty == false {
+            let step: CGFloat = CGFloat(360 / segments.count)
+            var fromAngle: CGFloat = 0
+            var toAngle: CGFloat = step
+            
+            for segment in segments {
+                addSegmentCircleLayer(fromAngle: fromAngle, toAngle: toAngle, color: segment.color)
+                fromAngle = toAngle
+                toAngle += step
+            }
+            
+            toAngle = step
+            for segment in segments {
+                addTextLayer(text: segment.title, toAngle: toAngle)
+                toAngle += step
+            }
+        }
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
+    func hide() {
+        layer.sublayers?.forEach { $0.removeFromSuperlayer() }
     }
     
-    func setup() {
-        circleLayer.strokeColor = UIColor.black.cgColor
-        layer.addSublayer(circleLayer)
-        layer.backgroundColor = UIColor.clear.cgColor
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    private func addSegmentCircleLayer(fromAngle: CGFloat, toAngle: CGFloat, color: UIColor) {
+        let segmentLayer = SegmentCircleLayer()
+        segmentLayer.strokeColor = color.cgColor
+        segmentLayer.fillColor = UIColor.clear.cgColor
+        layer.addSublayer(segmentLayer)
+        
+        let startAngle = (fromAngle-90).toRadians()
+        let endAngle = (toAngle-90).toRadians()
         let center = CGPoint(x: bounds.midX, y: bounds.midY)
         let radius = min(bounds.width, bounds.height) / 4
+        let path = UIBezierPath(arcCenter: CGPoint(x: 0,y :0), radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
         
-        circleLayer.addPath(startPoint: center, radius: radius, fillColor: UIColor.blue)
-        circleLayer.startAnimate()
+        segmentLayer.position = center
+        segmentLayer.lineWidth = radius * 2
+        segmentLayer.path = path.cgPath
+
+        segmentLayer.startAnimate()
+    }
+    
+    private func addTextLayer(text: String, toAngle: CGFloat) {
+        let endAngle = (toAngle-90).toRadians()
+        let center = CGPoint(x: bounds.midX, y: bounds.midY)
+        let radius = min(bounds.width, bounds.height) / 4
+        let textSize = text.size(withAttributes: textAttributes)
+        
+        let textlayer = CATextLayer()
+        
+        // NOTE: не совсем верное определение центра сегмента, времени шлифовать нет... :(
+        textlayer.frame = CGRect(x: center.x - (textSize.width / 2) + radius * cos(endAngle), y: center.y - (textSize.height / 2) + -(radius * sin(endAngle)), width: textSize.width, height: textSize.height)
+        
+        textlayer.fontSize = 12
+        textlayer.alignmentMode = .center
+        textlayer.string = text
+        textlayer.isWrapped = true
+        textlayer.truncationMode = .end
+        textlayer.backgroundColor = UIColor.clear.cgColor
+        textlayer.foregroundColor = UIColor.black.cgColor
+        
+        layer.addSublayer(textlayer)
     }
 }

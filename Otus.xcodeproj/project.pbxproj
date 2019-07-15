@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D22AFCDB22DCFB6500135D3B /* CGFloat+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22AFCDA22DCFB6500135D3B /* CGFloat+.swift */; };
 		D23C668022A04C82003012DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C667F22A04C82003012DC /* AppDelegate.swift */; };
 		D23C668722A04C82003012DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D23C668622A04C82003012DC /* Assets.xcassets */; };
 		D23C669922A04D91003012DC /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D23C669722A04D91003012DC /* MainTabBar.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D22AFCDA22DCFB6500135D3B /* CGFloat+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+.swift"; sourceTree = "<group>"; };
 		D23C667C22A04C82003012DC /* Otus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23C667F22A04C82003012DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D23C668622A04C82003012DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 			children = (
 				D2DFC2A022A848670002F074 /* UISplitViewController+.swift */,
 				D2DFC2A222A848740002F074 /* UINavigationController+.swift */,
+				D22AFCDA22DCFB6500135D3B /* CGFloat+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				D2C613FD22AEE32D00AED82D /* TimerNavigationBarBehavior.swift in Sources */,
 				D2DFC29B22A83BF80002F074 /* Feed3Controller.swift in Sources */,
 				D258451422B2CB1C005CD945 /* SessionSummaryController.swift in Sources */,
+				D22AFCDB22DCFB6500135D3B /* CGFloat+.swift in Sources */,
 				D2C6140122AEE36900AED82D /* StatusBarStyleNavigationBarBehavior.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -75,6 +75,7 @@
             <size key="customSize" width="508" height="213"/>
             <connections>
                 <outlet property="dateLabel" destination="0U6-fh-inf" id="Yvg-xL-E2j"/>
+                <outlet property="pieChartVeiw" destination="sJB-bC-Rju" id="Rfi-Bc-4XD"/>
                 <outlet property="stackView" destination="HLK-CB-XfC" id="hrb-0Q-nVu"/>
                 <outlet property="timerImageView" destination="WHb-T1-pta" id="P75-Oj-uz2"/>
             </connections>
