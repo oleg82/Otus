@@ -9,28 +9,16 @@
 import Foundation
 
 struct FeedProvider {
-    static func get() -> [String] {
+    func get() -> [(SuffixSequence, String)] {
+        return AlgoProvider().all.map { (SuffixSequence(string: $0), $0) }.sorted { $0.1 < $1.1 }
+    }
+    
+    func feedMockData() -> [FeedData] {
         return [
-            "Feed 1",
-            "Feed 2",
-            "Feed 3",
-            "Feed 4",
-            "Feed 5",
-            "Feed 6",
-            "Feed 7",
-            "Feed 8",
-            "Feed 9",
-            "Feed 10",
-            "Feed 11",
-            "Feed 12",
-            "Feed 13",
-            "Feed 14",
-            "Feed 15",
-            "Feed 16",
-            "Feed 17",
-            "Feed 18",
-            "Feed 19",
-            "Feed 20"
+            FeedData(name: "Array"),
+            FeedData(name: "Set"),
+            FeedData(name: "Dictionary")
         ]
     }
+
 }
